@@ -11,8 +11,10 @@ export const useCompanyConfig = (companySlug) => {
     setError(null)
 
     try {
+      // Si no hay companySlug, simplemente no cargar nada (no es un error)
       if (!companySlug) {
-        setError('No company slug provided')
+        setConfig(null)
+        setError(null)
         setLoading(false)
         return
       }
@@ -23,11 +25,14 @@ export const useCompanyConfig = (companySlug) => {
 
       if (company) {
         setConfig(company)
+        setError(null)
       } else {
         setError('Company not found')
+        setConfig(null)
       }
     } catch (err) {
       setError(err.message)
+      setConfig(null)
     } finally {
       setLoading(false)
     }
