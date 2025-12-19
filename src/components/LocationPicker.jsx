@@ -31,7 +31,7 @@ const reverseGeocode = async (lat, lng) => {
       `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
       {
         headers: {
-          'User-Agent': 'ViajaPorWPP/1.0'
+          'User-Agent': 'ReservaPorApp/1.0'
         }
       }
     )
@@ -64,7 +64,7 @@ const searchAddresses = async (query) => {
       `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`,
       {
         headers: {
-          'User-Agent': 'ViajaPorWPP/1.0'
+          'User-Agent': 'ReservaPorApp/1.0'
         }
       }
     )

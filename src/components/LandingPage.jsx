@@ -23,7 +23,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="landing-content">
-        <h1 className="landing-title">Viaja por WPP</h1>
+        <h1 className="landing-title">Reserva por App</h1>
         <p className="landing-subtitle">
           Plataforma para empresas de transporte privado
         </p>

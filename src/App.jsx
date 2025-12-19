@@ -41,7 +41,7 @@ function MainContent() {
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter basename="/viaja-por-wpp">
+      <BrowserRouter basename="/reserva-por-app">
         <CompanyProvider>
           <Routes>
             <Route path="/" element={<MainContent />} />

@@ -1,4 +1,4 @@
-# Viaja por WhatsApp
+# Reserva por App
 
 Plataforma para empresas de transporte privado que permite recibir solicitudes estructuradas vía WhatsApp. Los usuarios pueden seleccionar origen y destino en un mapa interactivo y enviar la solicitud directamente por WhatsApp.
 
@@ -29,7 +29,7 @@ npm run build
 ### Paso 1: Crear repositorio en GitHub
 
 1. Ve a [GitHub](https://github.com) y crea un nuevo repositorio
-2. **Importante:** Anota el nombre exacto del repositorio (ej: `viaja-por-wpp`)
+2. **Importante:** Anota el nombre exacto del repositorio (ej: `reserva-por-app`)
 
 ### Paso 2: Configurar el base path
 
@@ -100,7 +100,7 @@ npm run deploy
 ## 📁 Estructura del Proyecto
 
 ```
-viaja-por-wpp/
+reserva-por-app/
 ├── src/
 │   ├── components/        # Componentes React
 │   │   ├── LocationPicker.jsx

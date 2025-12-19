@@ -19,6 +19,6 @@ export default defineConfig({
       }
     }
   ],
-  base: '/viaja-por-wpp',
+  base: '/reserva-por-app',
 })
 
