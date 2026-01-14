@@ -15,7 +15,11 @@ export const LanguageProvider = ({ children }) => {
   }, [language])
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'es' ? 'en' : 'es')
+    setLanguage(prev => {
+      if (prev === 'es') return 'en'
+      if (prev === 'en') return 'pt'
+      return 'es'
+    })
   }
 
   return (

@@ -24,6 +24,10 @@ export const generateWhatsAppURL = (companyNumber, formData, language = 'es') =>
     message += `*${t.passengers}:* ${formData.passengers}\n`
   }
   
+  if (formData.vehicleType) {
+    message += `*${t.vehicleType}:* ${formData.vehicleType}\n`
+  }
+  
   if (formData.notes) {
     message += `*${t.notes}:* ${formData.notes}\n`
   }

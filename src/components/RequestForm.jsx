@@ -4,6 +4,7 @@ import { useCompany } from '../context/CompanyContext'
 import { generateWhatsAppURL } from '../utils/whatsapp'
 import LocationInput from './LocationInput'
 import DateTimePicker from './DateTimePicker'
+import VehicleSelector from './VehicleSelector'
 import './RequestForm.css'
 
 const RequestForm = () => {
@@ -16,6 +17,8 @@ const RequestForm = () => {
     date: '',
     time: '',
     passengers: '',
+    vehicleType: '',
+    vehicleTypeName: '',
     notes: ''
   })
 
@@ -49,6 +52,12 @@ const RequestForm = () => {
       newErrors.time = t('timeRequired')
     }
 
+    // Solo validar vehicleType si hay tipos de vehículo configurados
+    const hasVehicleTypes = config?.vehicleTypes && config.vehicleTypes.length > 0
+    if (hasVehicleTypes && !formData.vehicleType) {
+      newErrors.vehicleType = t('vehicleTypeRequired')
+    }
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -71,6 +80,7 @@ const RequestForm = () => {
         date: formData.date,
         time: formData.time,
         passengers: formData.passengers || null,
+        vehicleType: formData.vehicleTypeName || null,
         notes: formData.notes || null
       },
       language
@@ -124,6 +134,15 @@ const RequestForm = () => {
             timeError={errors.time}
           />
         </div>
+
+        <VehicleSelector
+          value={formData.vehicleType}
+          onChange={(vehicleId, vehicleName) => 
+            setFormData({ ...formData, vehicleType: vehicleId, vehicleTypeName: vehicleName })
+          }
+          error={errors.vehicleType}
+          vehicleTypes={config?.vehicleTypes || []}
+        />
 
         <div className="form-field compact-field">
           <label className="form-label">

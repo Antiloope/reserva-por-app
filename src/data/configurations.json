@@ -11,7 +11,27 @@
         "lat": -32.8895,
         "lng": -68.8458
       },
-      "mapZoom": 12
+      "mapZoom": 12,
+      "vehicleTypes": [
+        {
+          "id": "sedan",
+          "icon": "car",
+          "nameKey": "vehicleTypes.sedan.name",
+          "descriptionKey": "vehicleTypes.sedan.description"
+        },
+        {
+          "id": "pickup",
+          "icon": "pickup",
+          "nameKey": "vehicleTypes.pickup.name",
+          "descriptionKey": "vehicleTypes.pickup.description"
+        },
+        {
+          "id": "van",
+          "icon": "van",
+          "nameKey": "vehicleTypes.van.name",
+          "descriptionKey": "vehicleTypes.van.description"
+        }
+      ]
     },
     {
       "slug": "rodri-viajes",
@@ -24,7 +44,27 @@
         "lat": -31.4201,
         "lng": -64.1888
       },
-      "mapZoom": 12
+      "mapZoom": 12,
+      "vehicleTypes": [
+        {
+          "id": "sedan",
+          "icon": "car",
+          "nameKey": "vehicleTypes.sedan.name",
+          "descriptionKey": "vehicleTypes.sedan.description"
+        },
+        {
+          "id": "pickup",
+          "icon": "pickup",
+          "nameKey": "vehicleTypes.pickup.name",
+          "descriptionKey": "vehicleTypes.pickup.description"
+        },
+        {
+          "id": "van",
+          "icon": "van",
+          "nameKey": "vehicleTypes.van.name",
+          "descriptionKey": "vehicleTypes.van.description"
+        }
+      ]
     }
   ]
 }
