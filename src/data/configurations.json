@@ -3,7 +3,7 @@
     {
       "slug": "xuma-travel",
       "name": "Xuma Travel",
-      "whatsappNumber": "+5493512046485",
+      "whatsappNumber": "+5492604023087",
       "description": "Servicio de transporte privado en Mendoza, Argentina",
       "operatingArea": "Mendoza y alrededores",
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXKbihUu4Vbyg_dKxClw0rvCYAigq0sTm4g&s",
@@ -16,20 +16,47 @@
         {
           "id": "sedan",
           "icon": "car",
-          "nameKey": "vehicleTypes.sedan.name",
-          "descriptionKey": "vehicleTypes.sedan.description"
+          "name": {
+            "es": "Automóvil",
+            "en": "Sedan",
+            "pt": "Automóvel"
+          },
+          "description": {
+            "es": "Hasta 4 personas con poco equipaje o equipo de ski",
+            "en": "Up to 4 people with light luggage or ski equipment",
+            "pt": "Até 4 pessoas com pouca bagagem ou equipamento de esqui"
+          },
+          "priceIndicator": "$"
         },
         {
           "id": "pickup",
           "icon": "pickup",
-          "nameKey": "vehicleTypes.pickup.name",
-          "descriptionKey": "vehicleTypes.pickup.description"
+          "name": {
+            "es": "Pickup",
+            "en": "Pickup",
+            "pt": "Pickup"
+          },
+          "description": {
+            "es": "Hasta 4 personas, sin restricción de equipo o valijas",
+            "en": "Up to 4 people, no luggage or baggage restrictions",
+            "pt": "Até 4 pessoas, sem restrição de equipamento ou malas"
+          },
+          "priceIndicator": "$$"
         },
         {
           "id": "van",
           "icon": "van",
-          "nameKey": "vehicleTypes.van.name",
-          "descriptionKey": "vehicleTypes.van.description"
+          "name": {
+            "es": "Van",
+            "en": "Van",
+            "pt": "Van"
+          },
+          "description": {
+            "es": "Para grupos",
+            "en": "For groups",
+            "pt": "Para grupos"
+          },
+          "priceIndicator": "$$$"
         }
       ]
     },
@@ -49,20 +76,47 @@
         {
           "id": "sedan",
           "icon": "car",
-          "nameKey": "vehicleTypes.sedan.name",
-          "descriptionKey": "vehicleTypes.sedan.description"
+          "name": {
+            "es": "Automóvil",
+            "en": "Sedan",
+            "pt": "Automóvel"
+          },
+          "description": {
+            "es": "Hasta 4 personas con poco equipaje o equipo de ski",
+            "en": "Up to 4 people with light luggage or ski equipment",
+            "pt": "Até 4 pessoas com pouca bagagem ou equipamento de esqui"
+          },
+          "priceIndicator": "$"
         },
         {
           "id": "pickup",
           "icon": "pickup",
-          "nameKey": "vehicleTypes.pickup.name",
-          "descriptionKey": "vehicleTypes.pickup.description"
+          "name": {
+            "es": "Pickup",
+            "en": "Pickup",
+            "pt": "Pickup"
+          },
+          "description": {
+            "es": "Hasta 4 personas, sin restricción de equipo o valijas",
+            "en": "Up to 4 people, no luggage or baggage restrictions",
+            "pt": "Até 4 pessoas, sem restrição de equipamento ou malas"
+          },
+          "priceIndicator": "$$"
         },
         {
           "id": "van",
           "icon": "van",
-          "nameKey": "vehicleTypes.van.name",
-          "descriptionKey": "vehicleTypes.van.description"
+          "name": {
+            "es": "Van",
+            "en": "Van",
+            "pt": "Van"
+          },
+          "description": {
+            "es": "Para grupos",
+            "en": "For groups",
+            "pt": "Para grupos"
+          },
+          "priceIndicator": "$$$"
         }
       ]
     }

@@ -5,47 +5,32 @@ export const CarIcon = ({ className = '' }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Sedan - Vista lateral */}
+    {/* Sombra de suelo */}
+    <ellipse cx="40" cy="35" rx="30" ry="2" fill="currentColor" fillOpacity="0.1" />
+    
+    {/* Cuerpo principal (Sedán) */}
     <path
-      d="M12 28C12 28 14 28 16 28C16 28 18 18 28 18L52 18C58 18 62 22 64 28L68 28"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M10 28H14C14 26 16 25 18 25C20 25 22 26 22 28H58C58 26 60 25 62 25C64 25 66 26 66 28H70V26C70 22 68 21 64 20L62 18C60 16 58 14 54 14H30C26 14 24 16 22 18L20 20C16 21 10 22 10 26V28Z"
+      fill="currentColor"
     />
-    {/* Cuerpo inferior */}
+    
+    {/* Ventanas (Recortes) */}
     <path
-      d="M8 28H72C72 28 72 32 68 32H12C8 32 8 28 8 28Z"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Ventanas */}
-    <path
-      d="M30 18L28 24H38L38 18H30Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M26 16.5L24 20H40V16.5H26Z"
+      fill="white"
+      fillOpacity="0.9"
     />
     <path
-      d="M40 18V24H52L56 24C56 22 54 18 52 18H40Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M42 16.5V20H58L54 16.5H42Z"
+      fill="white"
+      fillOpacity="0.9"
     />
-    {/* Rueda delantera */}
-    <circle cx="22" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="22" cy="32" r="2.5" fill="currentColor" />
-    {/* Rueda trasera */}
-    <circle cx="58" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="58" cy="32" r="2.5" fill="currentColor" />
+    
+    {/* Ruedas */}
+    <circle cx="18" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="18" cy="28.5" r="2.5" fill="white" />
+    <circle cx="62" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="62" cy="28.5" r="2.5" fill="white" />
   </svg>
 )
 
@@ -56,58 +41,27 @@ export const PickupIcon = ({ className = '' }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Pickup - Vista lateral */}
-    {/* Cabina */}
+    {/* Sombra de suelo */}
+    <ellipse cx="40" cy="35" rx="32" ry="2" fill="currentColor" fillOpacity="0.1" />
+    
+    {/* Cuerpo principal (Pickup) */}
     <path
-      d="M10 28L12 20C12 20 14 12 24 12H32C36 12 38 16 38 20V28"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M8 28H14C14 26 16 25 18 25C20 25 22 26 22 28H58C58 26 60 25 62 25C64 25 66 26 66 28H72V24C72 24 72 20 68 20H42V14C42 12 40 10 36 10H26C22 10 20 12 18 14L16 16C12 18 8 20 8 24V28Z"
+      fill="currentColor"
     />
-    {/* Ventana cabina */}
+    
+    {/* Ventana cabina (Recortes) */}
     <path
-      d="M16 20C16 16 18 14 22 14H30C32 14 34 16 34 18V22H16V20Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M22 13.5L20 17H38V13.5H22Z"
+      fill="white"
+      fillOpacity="0.9"
     />
-    {/* Caja de carga */}
-    <path
-      d="M38 20H68V28H38V20Z"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Borde caja */}
-    <path
-      d="M40 20V16H66V20"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Cuerpo inferior */}
-    <path
-      d="M6 28H74C74 28 74 32 70 32H10C6 32 6 28 6 28Z"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Rueda delantera */}
-    <circle cx="20" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="20" cy="32" r="2.5" fill="currentColor" />
-    {/* Rueda trasera */}
-    <circle cx="60" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="60" cy="32" r="2.5" fill="currentColor" />
+    
+    {/* Ruedas */}
+    <circle cx="18" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="18" cy="28.5" r="2.5" fill="white" />
+    <circle cx="62" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="62" cy="28.5" r="2.5" fill="white" />
   </svg>
 )
 
@@ -118,73 +72,41 @@ export const VanIcon = ({ className = '' }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Van/Minibus - Vista lateral */}
-    {/* Cuerpo principal */}
+    {/* Sombra de suelo */}
+    <ellipse cx="40" cy="35" rx="34" ry="2" fill="currentColor" fillOpacity="0.1" />
+    
+    {/* Cuerpo principal (Van) */}
     <path
-      d="M8 28V14C8 10 12 8 16 8H56C64 8 68 12 70 18L72 28"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M6 28H14C14 26 16 25 18 25C20 25 22 26 22 28H58C58 26 60 25 62 25C64 25 66 26 66 28H74V14C74 10 70 8 66 8H16C12 8 8 10 8 14L6 20V28Z"
+      fill="currentColor"
     />
-    {/* Ventana frontal */}
+    
+    {/* Ventanas (Recortes) */}
     <path
-      d="M56 10C62 10 64 14 66 18H56V10Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Ventanas laterales */}
-    <path
-      d="M12 10H20V18H12V10Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M12 11H22V17H12V11Z"
+      fill="white"
+      fillOpacity="0.9"
     />
     <path
-      d="M24 10H32V18H24V10Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M25 11H35V17H25V11Z"
+      fill="white"
+      fillOpacity="0.9"
     />
     <path
-      d="M36 10H44V18H36V10Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M38 11H48V17H38V11Z"
+      fill="white"
+      fillOpacity="0.9"
     />
-    {/* Puerta corredera */}
     <path
-      d="M46 10H52V24H46V10Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
+      d="M51 11H68L64 17H51V11Z"
+      fill="white"
+      fillOpacity="0.9"
     />
-    {/* Cuerpo inferior */}
-    <path
-      d="M4 28H76C76 28 76 32 72 32H8C4 32 4 28 4 28Z"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-    {/* Rueda delantera */}
-    <circle cx="18" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="18" cy="32" r="2.5" fill="currentColor" />
-    {/* Rueda trasera */}
-    <circle cx="62" cy="32" r="6" stroke="currentColor" strokeWidth="2.5" fill="none" />
-    <circle cx="62" cy="32" r="2.5" fill="currentColor" />
+    
+    {/* Ruedas */}
+    <circle cx="18" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="18" cy="28.5" r="2.5" fill="white" />
+    <circle cx="62" cy="28.5" r="5.5" fill="currentColor" />
+    <circle cx="62" cy="28.5" r="2.5" fill="white" />
   </svg>
 )

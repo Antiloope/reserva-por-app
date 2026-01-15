@@ -38,7 +38,7 @@ const searchAddresses = async (query) => {
   }
 }
 
-const LocationInput = ({ label, value, onChange, error, required = true }) => {
+const LocationInput = ({ label, value, onChange, error, required = true, placeholder }) => {
   const { t } = useTranslation()
   const [address, setAddress] = useState(value || '')
   const [suggestions, setSuggestions] = useState([])
@@ -158,7 +158,9 @@ const LocationInput = ({ label, value, onChange, error, required = true }) => {
             ref={inputRef}
             type="text"
             className={`location-input ${error ? 'error' : ''}`}
-            placeholder={label === t('origin') ? t('selectOrigin') : t('selectDestination')}
+            placeholder={
+              placeholder || (label === t('origin') ? t('selectOrigin') : t('selectDestination'))
+            }
             value={address}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}

@@ -27,7 +27,7 @@
 
 .vehicle-card {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 4;
   background: var(--color-white);
   border: 2px solid var(--color-gray-light);
   border-radius: 12px;
@@ -76,13 +76,14 @@
 .vehicle-icon {
   width: 64px;
   height: 32px;
-  color: var(--color-blue);
+  color: var(--color-dark);
   flex-shrink: 0;
   margin-bottom: 0.5rem;
 }
 
 .vehicle-card.selected .vehicle-icon {
   color: var(--color-blue-dark);
+  filter: brightness(0.85);
 }
 
 .vehicle-text {
@@ -110,6 +111,19 @@
   align-items: center;
 }
 
+.vehicle-price {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--color-blue);
+  line-height: 1;
+}
+
+.vehicle-card.selected .vehicle-price {
+  color: var(--color-blue-dark);
+}
+
 .error-message {
   display: block;
   color: #e53e3e;
@@ -125,34 +139,50 @@
   }
 
   .vehicle-card {
-    padding: 0.875rem;
+    padding: 1rem;
     aspect-ratio: auto;
-    min-height: 90px;
+    min-height: 80px;
+    justify-content: flex-start; /* Corregido: alinea al inicio para mobile */
+    align-items: stretch;
   }
 
   .vehicle-card-content {
     flex-direction: row;
     text-align: left;
-    gap: 1rem;
+    gap: 1.25rem;
+    justify-content: flex-start;
+    align-items: flex-start; /* Corregido: alinea ícono arriba */
   }
 
   .vehicle-icon {
-    width: 72px;
-    height: 36px;
+    width: 64px;
+    height: 32px;
     margin-bottom: 0;
+    margin-top: 4px; /* Pequeño ajuste visual */
+    align-self: flex-start;
+    flex-shrink: 0;
   }
 
   .vehicle-text {
     align-items: flex-start;
     flex: 1;
+    min-width: 0;
+    gap: 0.15rem;
   }
 
   .vehicle-name {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .vehicle-description {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+  
+  .vehicle-price {
+    margin-top: 1px;
+    font-size: 0.8rem;
   }
 }
 
@@ -163,19 +193,23 @@
 
   .vehicle-card {
     padding: 0.75rem;
-    min-height: 80px;
+    min-height: 70px;
+  }
+
+  .vehicle-card-content {
+    gap: 1rem;
   }
 
   .vehicle-icon {
-    width: 60px;
-    height: 30px;
+    width: 56px;
+    height: 28px;
   }
 
   .vehicle-name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .vehicle-description {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 }

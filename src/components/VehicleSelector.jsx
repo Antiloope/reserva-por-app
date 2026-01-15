@@ -10,16 +10,16 @@ const iconMap = {
 }
 
 const VehicleSelector = ({ value, onChange, error, vehicleTypes = [] }) => {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
 
   // Seleccionar el primer elemento por defecto cuando hay vehicleTypes y no hay valor seleccionado
   useEffect(() => {
     if (vehicleTypes.length > 0 && !value) {
       const firstVehicle = vehicleTypes[0]
-      const firstName = t(firstVehicle.nameKey)
+      const firstName = firstVehicle.name?.[language] || firstVehicle.name?.es || firstVehicle.id
       onChange(firstVehicle.id, firstName)
     }
-  }, [vehicleTypes])
+  }, [vehicleTypes, value, onChange, language])
 
   // Si no hay tipos de vehículo, no renderizar nada
   if (!vehicleTypes || vehicleTypes.length === 0) {
@@ -40,9 +40,10 @@ const VehicleSelector = ({ value, onChange, error, vehicleTypes = [] }) => {
       <div className="vehicle-cards-grid">
         {vehicleTypes.map((vehicle) => {
           const IconComponent = iconMap[vehicle.icon]
-          const vehicleName = t(vehicle.nameKey)
-          const vehicleDescription = t(vehicle.descriptionKey)
+          const vehicleName = vehicle.name?.[language] || vehicle.name?.es || vehicle.id
+          const vehicleDescription = vehicle.description?.[language] || vehicle.description?.es || ''
           const isSelected = value === vehicle.id
+          const priceIndicator = vehicle.priceIndicator
 
           return (
             <button
@@ -59,6 +60,11 @@ const VehicleSelector = ({ value, onChange, error, vehicleTypes = [] }) => {
                 <div className="vehicle-text">
                   <h3 className="vehicle-name">{vehicleName}</h3>
                   <p className="vehicle-description">{vehicleDescription}</p>
+                  {priceIndicator ? (
+                    <div className="vehicle-price" aria-label={`Price: ${priceIndicator}`}>
+                      {priceIndicator}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </button>
